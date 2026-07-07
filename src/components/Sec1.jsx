@@ -4,14 +4,13 @@ import ProductCard from "./ProductCard";
 export default function Sec1() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const products = [
-    { img: "https://aibee.live/wp-content/uploads/2023/10/19-1-303x500.webp", alt: "product 19" },
-    { img: "https://aibee.live/wp-content/uploads/2023/10/10-1-303x500.webp", alt: "product 10" },
-    { img: "https://aibee.live/wp-content/uploads/2023/10/17-1-303x500.webp", alt: "product 17" },
-    { img: "https://aibee.live/wp-content/uploads/2023/10/08-1-303x500.jpg", alt: "product 08" },
-    { img: "https://aibee.live/wp-content/uploads/2023/10/05-1-303x500.jpg", alt: "product 05" },
-  ];
-
+const products = [
+  { img: "/public/honey.png", alt: "product 19" },
+  { img: "/public/honey1.png", alt: "product 10" },
+  { img: "/public/honey2.png", alt: "product 17" },
+  { img: "/public/honey3.png", alt: "product 08" },
+  { img: "/public/honey4.png", alt: "product 05" },
+];
   const showNext = useCallback(() => {
     setSelectedIndex((prev) => (prev < products.length - 1 ? prev + 1 : prev));
   }, [products.length]);
@@ -33,6 +32,11 @@ export default function Sec1() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedIndex, showNext, showPrev]);
 
+  const handleBuyClick = (index) => {
+    setSelectedIndex(index);
+    // bu yerga buyurtma / checkout logikasi qo'shiladi
+  };
+
   return (
     <div className="pb-20 relative">
       <div className="text-center my-14">
@@ -45,14 +49,18 @@ export default function Sec1() {
         </p>
       </div>
 
-      <div className="flex justify-center gap-10 flex-wrap px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-10 px-4 justify-items-center">
         {products.map((product, index) => (
           <div
             key={index}
             onClick={() => setSelectedIndex(index)}
-            className="cursor-pointer transition-transform duration-300 hover:scale-105"
+            className="cursor-pointer transition-transform duration-300 hover:scale-105 w-full min-w-0 max-w-[160px] sm:max-w-[180px] md:max-w-[220px] [&>*]:w-full [&_img]:w-full [&_img]:h-auto [&_img]:max-w-full"
           >
-            <ProductCard img={product.img} alt={product.alt} />
+            <ProductCard
+              img={product.img}
+              alt={product.alt}
+              onBuyClick={() => handleBuyClick(index)}
+            />
           </div>
         ))}
       </div>
@@ -85,12 +93,25 @@ export default function Sec1() {
             </button>
           )}
 
-          <img
-            src={products[selectedIndex].img}
-            alt={products[selectedIndex].alt}
+          <div
+            className="inline-flex flex-col items-stretch gap-4"
             onClick={(e) => e.stopPropagation()}
-            className="w-auto max-w-[92vw] sm:max-w-[85vw] md:max-w-[90vw] max-h-[85vh] object-contain rounded-md shadow-2xl animate-in zoom-in duration-300"
-          />
+          >
+            <img
+              src={products[selectedIndex].img}
+              alt={products[selectedIndex].alt}
+              className="w-auto max-w-[92vw] sm:max-w-[85vw] md:max-w-[400px] max-h-[70vh] object-contain rounded-md shadow-2xl animate-in zoom-in duration-300"
+            />
+
+            <button
+              onClick={() => {
+              
+              }}
+              className="w-full bg-[#FFD82F] cursor-pointer text-black py-2.5 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-gray-800 hover:text-white transition-colors duration-300"
+            >
+              Купить
+            </button>
+          </div>
 
           {selectedIndex < products.length - 1 && (
             <button

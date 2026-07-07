@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { FaHome, FaBullhorn, FaBookmark } from "react-icons/fa";
 import Hero from "./Hero";
+import { MdOutlineCollections } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +27,9 @@ export default function Navbar() {
           <li>
             <a
               href="/collection"
-              className="font-semibold text-black hover:text-yellow-600 transition-colors"
+              className="flex items-center gap-1.5 font-semibold text-black hover:text-yellow-600 transition-colors"
             >
+              <MdOutlineCollections />
               Collection
             </a>
           </li>
@@ -72,8 +74,9 @@ export default function Navbar() {
             <li>
               <a
                 href="/collection"
-                className="font-semibold text-black hover:text-yellow-600 transition-colors"
+                className="flex items-center gap-1.5 font-semibold text-black hover:text-yellow-600 transition-colors"
               >
+                <MdOutlineCollections />
                 Collection
               </a>
             </li>
