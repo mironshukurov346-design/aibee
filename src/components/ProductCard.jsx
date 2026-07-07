@@ -16,7 +16,7 @@ export default function ProductCard({ img, alt, onBuyClick }) {
         }}
         className="w-full mt-2 mb-1 bg-[#FFD82F] cursor-pointer text-black py-2.5 rounded-full font-bold text-[10px] tracking-widest uppercase transition-transform duration-200 hover:scale-105 active:scale-95"
       >
-        Купить
+        buy
       </button>
     </div>
   );

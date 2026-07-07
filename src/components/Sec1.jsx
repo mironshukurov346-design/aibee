@@ -109,7 +109,7 @@ const products = [
               }}
               className="w-full bg-[#FFD82F] cursor-pointer text-black py-2.5 rounded-full font-bold text-[10px] tracking-widest uppercase hover:bg-gray-800 hover:text-white transition-colors duration-300"
             >
-              Купить
+              buy
             </button>
           </div>
 
