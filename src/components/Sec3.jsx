@@ -44,7 +44,7 @@ export default function Sec3() {
           </div>
         </div>
 
-        <button className="px-8 cursor-pointer py-3 rounded-full bg-[#fdd03b] hover:bg-[#e6bb34] transition-colors font-semibold flex items-center gap-2 text-black text-sm tracking-wide w-full md:w-auto justify-center">
+        <button className="px-8 cursor-pointer py-3 rounded-full bg-[#fdd03b] hover:bg-[#e6bb34] transition-colors font-semibold flex items-center gap-2 text-black text-sm tracking-wide w-30 md:w-auto justify-center">
         
           SHOP
         </button>

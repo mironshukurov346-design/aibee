@@ -6,9 +6,9 @@ import { MdOutlineCollections } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
-    <div className="bg-[url('/MainBanner.png')] bg-cover bg-center bg-no-repeat w-full px-4 sm:px-8 pt-6 pb-16 h-auto sm:h-207">
+    <div className="bg-[url('/MainBanner.png')] bg-[length:160%] sm:bg-cover bg-[right_top] sm:bg-center bg-no-repeat w-full px-4 sm:px-8 pt-6 pb-10 sm:pb-16 min-h-[420px] sm:h-207">
       <nav className="max-w-6xl mx-auto flex items-center justify-between bg-white rounded-full shadow-md px-6 sm:px-8 py-3 relative">
         <a href="/">
           <img src="/logo.png" alt="aiboo logo" className="h-8 w-auto" />
@@ -16,7 +16,7 @@ export default function Navbar() {
 
         <ul className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-800">
           <li>
-            <a
+             <a
               href="/"
               className="flex items-center gap-1.5 hover:text-yellow-600 transition-colors"
             >
@@ -25,7 +25,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a
+             <a
               href="/collection"
               className="flex items-center gap-1.5 font-semibold text-black hover:text-yellow-600 transition-colors"
             >
@@ -34,7 +34,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a
+             <a
               href="/blog"
               className="flex items-center gap-1.5 hover:text-yellow-600 transition-colors"
             >
@@ -43,7 +43,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a
+             <a
               href="/about"
               className="flex items-center gap-1.5 hover:text-yellow-600 transition-colors"
             >
@@ -63,7 +63,7 @@ export default function Navbar() {
         {isOpen && (
           <ul className="sm:hidden absolute top-full left-0 mt-3 w-full bg-white rounded-2xl shadow-md flex flex-col items-start gap-4 p-6 text-sm font-medium text-gray-800 z-50">
             <li>
-              <a
+               <a
                 href="/"
                 className="flex items-center gap-1.5 hover:text-yellow-600 transition-colors"
               >
@@ -72,7 +72,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a
+               <a
                 href="/collection"
                 className="flex items-center gap-1.5 font-semibold text-black hover:text-yellow-600 transition-colors"
               >
@@ -81,7 +81,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a
+               <a
                 href="/blog"
                 className="flex items-center gap-1.5 hover:text-yellow-600 transition-colors"
               >
