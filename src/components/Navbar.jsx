@@ -7,6 +7,7 @@ import { MdOutlineCollections } from "react-icons/md";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+
   return (
     <div className="bg-[url('/MainBanner.png')] bg-[length:160%] sm:bg-cover bg-[right_top] sm:bg-center bg-no-repeat w-full px-4 sm:px-8 pt-6 pb-10 sm:pb-16 min-h-[420px] sm:h-207">
       <nav className="max-w-6xl mx-auto flex items-center justify-between bg-white rounded-full shadow-md px-6 sm:px-8 py-3 relative">
