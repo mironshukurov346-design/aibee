@@ -1,22 +1,20 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Hero from "./components/Hero"
-import Sec1 from "./components/Sec1"
-import Sec2 from "./components/Sec2"
-import Sec3 from "./components/Sec3"
-import Sec4 from "./components/Sec4"
+import React from "react";
+
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Terms from "./pages/Terms";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <Sec1/>
-      <Sec2/>
-      <Sec3/>
-      <Sec4/>
-      
+    <div className="min-h-screen flex flex-col">
+      <div className="grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/terms" element={<Terms />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
-  )
+  );
 }
