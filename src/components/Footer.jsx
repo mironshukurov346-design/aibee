@@ -28,7 +28,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-3 text-sm">
             <li>
               <a
-                href="#"
+                href="/contact"
                 className="hover:text-black hover:underline decoration-black decoration-[1.5px] underline-offset-[5px] transition-all"
               >
                 Contact Us
